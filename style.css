@@ -257,12 +257,7 @@ body {
 
 .thumbnail {
   max-width: 100%;
-  filter: grayscale(100%);
   transition: all 0.8s ease-in-out;
-}
-
-.thumbnail:hover {
-  filter: none;
 }
 
 .type {

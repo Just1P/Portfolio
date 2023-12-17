@@ -1,0 +1,573 @@
+/*-----------------------*/
+/* FONTS-IMPORT */
+/*-----------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap");
+
+@font-face {
+  font-family: Gramatika;
+  src: url(./assets/typo/Gramatika-Light.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-----------------------*/
+/* VARIABLES */
+/*-----------------------*/
+:root {
+  /*-----------------------*/
+  /* COULEURS */
+  /*-----------------------*/
+
+  --primary-main: #fff;
+  --primary-90: rgba(255, 255, 255, 0.9);
+  --primary-80: rgba(255, 255, 255, 0.8);
+  --primary-70: rgba(255, 255, 255, 0.7);
+  --primary-60: rgba(255, 255, 255, 0.6);
+  --primary-50: rgba(255, 255, 255, 0.5);
+  --primary-40: rgba(255, 255, 255, 0.4);
+  --primary-30: rgba(255, 255, 255, 0.3);
+  --primary-20: rgba(255, 255, 255, 0.2);
+  --primary-10: rgba(255, 255, 255, 0.1);
+
+  --secondary: #0f1012;
+
+  /*-----------------------*/
+  /* SPACING     */
+  /*-----------------------*/
+
+  --spacing-none: 0px;
+  --spacing-3xs: 2px;
+  --spacing-2xs: 4px;
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 28px;
+  --spacing-4xl: 32px;
+  --spacing-5xl: 36px;
+  --spacing-6xl: 40px;
+  --spacing-7xl: 44px;
+  --spacing-8xl: 48px;
+  --spacing-9xl: 56px;
+  --spacing-10xl: 64px;
+  --spacing-11xl: 72px;
+  --spacing-12xl: 80px;
+  --spacing-full: 120px;
+  --spacing-cards: 200px;
+  --spacing-xlcards: 275px;
+  --section-small-max-width: 1000px;
+  --section-large-max-width: 1400px;
+  --section-xsmall-max-width: 750px;
+  --section-padding: 112px;
+  --block-size: 550px;
+
+  /*-----------------------*/
+  /* FONTS-SIZING */
+  /*-----------------------*/
+
+  --font-size-h1-header: 5rem;
+  --font-size-h2-header: 4rem;
+  --font-size-h1-header-s: 3.7rem;
+  --font-size-h2-header-s: 3rem;
+  --font-size-h2-aboutme: 2.5rem;
+  --font-size-text: 1rem;
+  --font-size-text-l: 1.5rem;
+  --font-size-text-s: 0.8rem;
+}
+
+/*-----------------------*/
+/* GENERAL */
+/*-----------------------*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Gramatika", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  background-image: url(./assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+  overscroll-behavior: none;
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+
+}
+
+/*-----------------------*/
+/* HEADER */
+/*-----------------------*/
+
+.center {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  max-width: var(--section-small-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xl);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl) 0;
+  gap: var(--spacing-9xl);
+  color: var(--secondary);
+
+  & a {
+    color: var(--primary-80);
+  }
+}
+
+.header-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  color: var(--primary-main);
+}
+
+.header-body .title {
+  font-size: var(--font-size-h1-header);
+  font-family: "Gramatika", sans-serif;
+}
+
+.header-body .subtitle {
+  font-size: var(--font-size-h2-header);
+  font-family: "Herr Von Muellerhoff", cursive;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+/*-----------------------*/
+/* About me */
+/*-----------------------*/
+
+.aboutme-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--font-size-h2-aboutme);
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gramatika", sans-serif;
+  color: var(--primary-main);
+  max-width: var(--section-small-max-width);
+  width: 100%;
+  justify-content: center;
+  gap: var(--spacing-12xl);
+  padding: var(--spacing-12xl) var(--spacing-4xl);
+}
+
+.separation {
+  height: 1px;
+  width: var(--spacing-10xl);
+  background-color: var(--primary-main);
+}
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-content{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/*-----------------------*/
+/* Cards */
+/*-----------------------*/
+
+.sticky-parent {
+  height: 320vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  gap: var(--section-padding);
+  padding-left: var(--spacing-full);
+  height: 95vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-illustration {
+  width: 935px;
+  height: 445px;
+  position: relative;
+}
+
+.thumbnail {
+  max-width: 100%;
+  filter: grayscale(100%);
+  transition: all 0.8s ease-in-out;
+}
+
+.thumbnail:hover {
+  filter: none;
+}
+
+.type {
+  position: absolute;
+  padding: var(--spacing-xs) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-main);
+  font-family: "Gramatika", sans-serif;
+  font-weight: 600;
+  font-size: var(--font-size-text);
+  border-radius: 5px;
+  top: 20px;
+  left: 20px;
+}
+
+#last-card {
+  padding-right: 25px;
+}
+
+#music {
+  height: 470px;
+  width: 835px;
+}
+
+.card-footer {
+  padding: var(--spacing-6xl) var(--spacing-6xl) 0 var(--spacing-6xl);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out 0.2s;
+}
+
+.card-footer.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card .title {
+  font-family: "Gramatika", sans-serif;
+  font-size: var(--font-size-text-l);
+  color: var(--primary-90);
+}
+
+.card .subtitle {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: var(--font-size-text);
+  color: var(--primary-60);
+  letter-spacing: 3px;
+}
+
+.open-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-7xl);
+  color: var(--primary-80);
+}
+
+.open-project-content {
+  font-family: "Gramatika", sans-serif;
+  font-size: var(--font-size-text);
+  margin-bottom: 6px;
+}
+
+.open-project-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/*-----------------------*/
+/* FOOTER */
+/*-----------------------*/
+
+.footer {
+  display: flex;
+  width: 100%;
+  gap: var(--spacing-cards);
+  padding: var(--spacing-5xl) 0 var(--spacing-full);
+  justify-content: center;
+}
+
+.links {
+  color: var(--primary-main);
+  font-family: "Gramatika", sans-serif;
+  font-size: var(--font-size-text);
+}
+
+#mouse-scroll {
+    margin: auto;
+    z-index: 9999;
+  }
+
+  #mouse-scroll .arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #mouse-scroll span{
+    display: block;
+    width: 5px; 
+    height: 5px;
+    -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+         transform: rotate(45deg);
+         transform: rotate(45deg);
+    border-right: 2px solid var(--primary-80); 
+    border-bottom: 2px solid var(--primary-80);
+    margin: 0 0 3px 5px;
+  }
+  #mouse-scroll .mouse {
+    height: 21px;
+    width: 14px;
+    border-radius: 10px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    border: 2px solid var(--primary-80);
+    top: 170px;
+  }
+  #mouse-scroll .down-arrow-1 {
+    margin-top: 6px;
+  }
+  #mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+    -webkit-animation: mouse-scroll 1s infinite; 
+      -moz-animation: mouse-scroll 1s infinite:
+  }
+  #mouse-croll .down-arrow-1 {
+     -webkit-animation-delay: .1s; 
+     -moz-animation-delay: .1s;
+     -webkit-animation-direction: alternate;
+  }
+  #mouse-scroll .down-arrow-2 {
+    -webkit-animation-delay: .2s; 
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+  }
+  #mouse-scroll .down-arrow-3 {
+     -webkit-animation-delay: .3s;
+     -moz-animation-dekay: .3s;
+     -webkit-animation-direction: alternate;
+  }
+  #mouse-scroll .mouse-in {
+    height: 5px;
+    width: 2px;
+    display: block; 
+    margin: 5px auto;
+    background: var(--primary-80);
+    position: relative;
+  }
+  #mouse-scroll .mouse-in {
+   -webkit-animation: animated-mouse 1.2s ease infinite;
+    moz-animation: mouse-animated 1.2s ease infinite;
+  }
+  
+  @-webkit-keyframes animated-mouse {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+       opacity: 0;
+      -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+      transform: translateY(6px);
+    }
+  }
+  @-webkit-keyframes mouse-scroll {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    } 
+  }
+  @keyframes mouse-scroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*-----------------------*/
+/* Responsive */
+/*-----------------------*/
+
+@media (max-width: 1200px) {
+  .aboutme {
+    max-width: var(--section-xsmall-max-width);
+  }
+
+  .sticky {
+    max-height: var(--section-xsmall-max-width);
+  }
+  .footer {
+    padding: var(--spacing-5xl) 0 var(--spacing-8xl);
+  }
+}
+
+@media (max-width: 980px) {
+  .aboutme {
+    max-width: 600px;
+  }
+  .horizontal {
+    padding-left: var(--spacing-10xl);
+  }
+  .card-illustration {
+    max-width: var(--block-size);
+    max-height: var(--spacing-xlcards);
+  }
+  #music {
+    max-height: 275px;
+  }
+  .card .title {
+    font-size: var(--font-size-text);
+  }
+  .card .subtitle {
+    font-size: var(--font-size-text-s);
+  }
+  .open-project-content {
+    font-size: var(--font-size-text-s);
+  }
+  .open-project-btn {
+    width: var(--spacing-4xl);
+    height: var(--spacing-4xl);
+  }
+  .footer {
+    gap: var(--spacing-12xl);
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    height: 90vh;
+    padding: var(--spacing-2xl) 0;
+  }
+  .header-body .title {
+    font-size: var(--font-size-h1-header-s);
+  }
+  .aboutme-subtitle{
+    font-size: var(--font-size-h2-header-s);
+  }
+  .aboutme-content p{
+    font-size: var(--font-size-text-s);
+  }
+  .horizontal{
+    padding-left: var(--spacing-4xl) ;
+  }
+  .card-illustration{
+    max-width: 300px;
+    max-height: 150px;
+  }
+  #music{
+    height: 150px;
+  }
+  .card-footer{
+    padding: var(--spacing-2xl) 0 ;
+  }
+  .open-project{
+    gap: var(--spacing-4xl);
+  }
+  .presentation .subtitle{
+    display: none;
+  }
+  .type {
+    font-size: var(--font-size-text-s);
+    padding: var(--spacing-xs) var(--spacing-lg) ;
+    top: 10px;
+    left: 10px;
+  }
+  .horizontal{
+    flex-direction: column;
+    padding: var(--spacing-6xl) var(--spacing-4xl);
+  }
+  .sticky{
+    max-height: 1800px;
+  }
+  .sticky-parent{
+    height: 150vh;
+  }
+  .horizontal{
+    height: 100%;
+  }
+  .footer{
+    gap: var(--spacing-4xl);
+    padding-right: var(--spacing-4xl);
+  }
+}
+

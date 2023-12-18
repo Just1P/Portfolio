@@ -495,6 +495,10 @@ body {
   #music {
     max-height: 275px;
   }
+  #travee{
+    max-height: 275px;
+    max-width: 525px;
+  }
   .card .title {
     font-size: var(--font-size-text);
   }
@@ -535,7 +539,11 @@ body {
     max-height: 150px;
   }
   #music{
-    height: 150px;
+    max-height: 150px;
+  }
+  #travee{
+    max-width: 300px;
+    max-height: 150px;
   }
   .card-footer{
     padding: var(--spacing-2xl) 0 ;
@@ -560,7 +568,7 @@ body {
     max-height: 1800px;
   }
   .sticky-parent{
-    height: 150vh;
+    height: 200vh;
   }
   .horizontal{
     height: 100%;
